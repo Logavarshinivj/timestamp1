@@ -4,7 +4,7 @@ import express from "express";
 import { MongoClient } from "mongodb";
 const app = express();
 const PORT = process.env.PORT;
-const Mongo_Url="mongodb://127.0.0.1";
+const Mongo_Url=process.env.Mongo_Url
 const client= new MongoClient(Mongo_Url); //dial
 await client.connect();//call
 console.log("Mongo is connected");
